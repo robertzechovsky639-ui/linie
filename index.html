@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LINIE · tenis 3. října 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520;9..144,640&family=Outfit:wght@360;460;560&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="mark">LINIE</span>
+    <span class="brand-sub">denní deska</span>
+  </div>
+  <p class="dateline" id="dateline">Sobota 3. října 2026 · Evropa/Praha</p>
+  <nav class="nav">
+    <button type="button" data-page="board" class="on">Program</button>
+    <button type="button" data-page="upcoming">Nadcházející</button>
+    <button type="button" data-page="method">Metodika</button>
+    <button type="button" data-page="record">Bilance</button>
+  </nav>
+</header>
+
+<main id="app">
+  <section id="page-board">
+    <div class="lede">
+      <h1>Sobota na kurtu</h1>
+      <p id="lede-text"></p>
+    </div>
+    <div class="filters">
+      <div class="seg" id="tour-filter" role="group" aria-label="Okruh">
+        <button type="button" data-tour="all" class="on">Vše</button>
+        <button type="button" data-tour="atp">ATP</button>
+        <button type="button" data-tour="wta">WTA</button>
+        <button type="button" data-tour="challenger">Challenger</button>
+      </div>
+      <div class="seg sub hidden" id="ch-filter">
+        <button type="button" data-ch="all" class="on">Challenger vše</button>
+        <button type="button" data-ch="atp_challenger">ATP Challenger</button>
+        <button type="button" data-ch="wta_125">WTA 125</button>
+      </div>
+      <label class="select">Povrch
+        <select id="surface">
+          <option value="all">všechny</option>
+          <option value="hard">tvrdý</option>
+          <option value="hard_indoor">tvrdý, hala</option>
+          <option value="clay">antuka</option>
+        </select>
+      </label>
+      <label class="select">Min. jistota modelu
+        <input id="minconf" type="range" min="0" max="80" value="0" step="5">
+        <span id="minconf-label">0 %</span>
+      </label>
+      <label class="check"><input type="checkbox" id="doubles"> čtyřhra <small>(bez modelu)</small></label>
+      <button type="button" id="reload" class="ghost">Obnovit snímek</button>
+    </div>
+    <p class="odds-banner" id="odds-banner"></p>
+    <div id="board"></div>
+    <section class="gaps" id="gaps"></section>
+  </section>
+
+  <section id="page-method" class="prose hidden">
+    <h1>Jak model počítá</h1>
+    <p>LINIE není tipařský účet. Je to průhledný přepočet žebříčku na pravděpodobnost. Nic z toho není sázkové doporučení.</p>
+    <h2>Rating z pořadí</h2>
+    <p>Kde je ověřené umístění, platí</p>
+    <p class="formula">R = 2200 − 200 · log<sub>10</sub>(pořadí)</p>
+    <p>Pravděpodobnost výhry hráče A proti B je logistická:</p>
+    <p class="formula">P(A) = 1 / (1 + 10<sup>(R<sub>B</sub> − R<sub>A</sub>) / 400</sup>)</p>
+    <p>Rozdíl deseti a padesáti míst tak není stejný jako rozdíl mezi první a druhou. Nasazení turnaje se do vzorce nedává. Nasazení je jen štítek pavouka.</p>
+    <h2>Povrch</h2>
+    <p>Člen povrchu je v datech explicitně 0. Povrch zápasu známe (tvrdý, hala, antuka), povrchové žebříčky ani bilance na povrchu se pro celé pole nepodařilo stáhnout jednotně. Model proto povrch neoceňuje. V detailu zápasu je to napsané. Jistota je kvůli tomu sražená koeficientem 0,72, a 0,64 tam, kde pořadí nepochází z tabulky k 2. říjnu.</p>
+    <h2>Jistota</h2>
+    <p>Jistota modelu = min(92, |P − 0,5| · 200) × kvalita dat. Je to vzdálenost od mince, ne záruka výsledku. Úzký žebříčkový rozdíl dá nízkou jistotu i při kompletních datech.</p>
+    <h2>Skóre</h2>
+    <p>Na tři vítězné sety se z pravděpodobnosti zápasu zpětně odhadne pravděpodobnost setu a z ní pravděpodobnost 2:0 a 2:1. Zobrazené skóre je modus modelu, ne prognóza průběhu.</p>
+    <h2>Online Elo</h2>
+    <p>Počáteční rating je vzorec z pořadí. Když v detailu zápasu zapíšete vítěze a sety, oba hráči se na daném povrchu posunou o Elo krok s K = 24. Očekávání je stejná logistická křivka. Sety se ukládají do bilance, ale nemění K: krok je za zápas, ne za gem. Další zápas na desce použije naučený rating na tom povrchu, jinak zase žebříčkový prior. Běží to v localStorage tohoto prohlížeče. Není to neuronová síť.</p>
+    <h2>Živý stav</h2>
+    <p>Do panelu se zadávají sety, gemy v rozehraném setu a kdo podává. Pravděpodobnost gemu na podání je z bodu, bod je prior z rozdílu ratingů (servis ani return se neměřily). Prior se zkalibruje tak, aby na 0:0 bez únavy seděl na předzápasové P. Únava násobí servisní náskok členem max(0,75, 1 − 0,004 · G). Hotový set, u kterého neznáme gemy, se počítá jako 10 gemů. Rozpad ukáže, co udělal rating, skóre a únava. Pravděpodobnost aktuálního setu a nejpravděpodobnější zbývající skóre zápasu se přepočtou s každým zadáním.</p>
+    <h2>Kurzy</h2>
+    <p>Desetinný kurz se bere jen z veřejné stránky stažené při sestavení snímku. Implikovaná pravděpodobnost je 1/kurz. Overround je součet obou mínus 1. Férová pravděpodobnost je implikovaná vydělená součtem. EV = P<sub>model</sub> · kurz − 1. Čtvrtinový Kelly je max(0, (P·kurz − 1) / (kurz − 1)) / 4. Když kurz není, sloupec říká „kurzy nedostupné“. Tlačítko obnovení znovu načte místní data.json. Živý websocket tu není.</p>
+    <h2>Zdroje pořadí</h2>
+    <p>ATP a WTA pořadí: StatsDream k 2. 10. 2026. Oficiální žebříček ATP při přímém stažení zablokoval Cloudflare. Xinran Sun je z karty hráčky na wtatennis.com (582, staženo 3. 10.). Guido Ivan Justo je z článku Tennis Tonic (239).</p>
+  </section>
+
+  <section id="page-upcoming" class="hidden">
+    <div class="lede">
+      <h1>Nadcházející</h1>
+      <p>Turnaje po 3. říjnu 2026. Zápas je tu jen tehdy, když existuje order of play nebo hotová dvojice. Jinak zůstane „pavouk zatím není“.</p>
+    </div>
+    <div class="seg" id="up-filter">
+      <button type="button" data-uptour="all" class="on">Vše</button>
+      <button type="button" data-uptour="atp">ATP</button>
+      <button type="button" data-uptour="wta">WTA</button>
+      <button type="button" data-uptour="challenger">Challenger</button>
+    </div>
+    <div id="upcoming-list"></div>
+  </section>
+
+  <section id="page-record" class="prose hidden">
+    <h1>Bilance</h1>
+    <div id="record-body"></div>
+  </section>
+</main>
+
+<aside id="drawer" class="drawer" hidden>
+  <div class="drawer-card">
+    <button type="button" id="drawer-close" class="ghost">Zavřít</button>
+    <div id="drawer-body"></div>
+  </div>
+</aside>
+
+<footer>
+  <p>Nejde o sázkové poradenství. Model je přepočet veřejného pořadí, ne předpověď budoucnosti. 18+.</p>
+  <p id="foot-time"></p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

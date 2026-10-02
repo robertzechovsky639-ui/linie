@@ -1,0 +1,2178 @@
+{
+  "fetched_at": "2026-10-03T01:52:00+02:00",
+  "timezone": "Europe/Prague",
+  "date": "2026-10-03",
+  "odds_policy": "Jen desetinné kurzy stažené z veřejné stránky. Kde chybí, je stav kurzy nedostupné. Žádný websocket.",
+  "rankings": {
+    "atp": {
+      "as_of": "2026-10-02",
+      "url": "https://statsdream.com/atp-rankings/",
+      "note": "Žebříček StatsDream k 2. 10. 2026. Oficiální stránka ATP při přímém stažení vrátila blokaci Cloudflare."
+    },
+    "wta": {
+      "as_of": "2026-10-02",
+      "url": "https://statsdream.com/wta-rankings/",
+      "note": "StatsDream k 2. 10. 2026. Xinran Sun doplněna z karty WTA."
+    }
+  },
+  "model": {
+    "name": "Rankline",
+    "formula": "rating = 2200 - 200 * log10(rank); P = 1 / (1 + 10^((Rb-Ra)/400)); povrchový posun = 0",
+    "surface_shift": 0,
+    "confidence": "min(92, |P-0.5|*200) * kvalita dat. Kvalita 0.72 bez povrchových žebříčků, 0.64 když je žebříček z jiného data nebo zdroje."
+  },
+  "matches": [
+    {
+      "id": "bj-deminaur-halys",
+      "tour": "atp",
+      "level": "ATP 500",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "osmifinále",
+      "court": "Capital Group Diamond",
+      "time_local": "11:00",
+      "time_zone": "CST (UTC+8)",
+      "time_prague": "05:00",
+      "time_kind": "start",
+      "players": [
+        {
+          "name": "Alex de Minaur",
+          "country": "AUS",
+          "rank": 10,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": 5,
+          "entry": null
+        },
+        {
+          "name": "Quentin Halys",
+          "country": "FRA",
+          "rank": 50,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.atptour.com/en/news/beijing-2026-schdule"
+      ],
+      "source_note": "Sestava na oficiálním WTA order of play (společný areál). Čas z indexovaného článku ATP; přímé stažení atptour.com zablokoval Cloudflare."
+    },
+    {
+      "id": "bj-rublev-safiullin",
+      "tour": "atp",
+      "level": "ATP 500",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "osmifinále",
+      "court": "Lotus",
+      "time_local": "13:00",
+      "time_zone": "CST (UTC+8)",
+      "time_prague": "07:00",
+      "time_kind": "not_before",
+      "players": [
+        {
+          "name": "Andrey Rublev",
+          "country": "",
+          "rank": 24,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": null
+        },
+        {
+          "name": "Roman Safiullin",
+          "country": "",
+          "rank": 84,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": "SE"
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.atptour.com/en/news/beijing-2026-schdule"
+      ],
+      "source_note": "SE = special exempt. Čas not before 13:00 místního."
+    },
+    {
+      "id": "bj-medvedev-struff",
+      "tour": "atp",
+      "level": "ATP 500",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "osmifinále",
+      "court": "Lotus",
+      "time_local": "17:00",
+      "time_zone": "CST (UTC+8)",
+      "time_prague": "11:00",
+      "time_kind": "not_before",
+      "players": [
+        {
+          "name": "Daniil Medvedev",
+          "country": "",
+          "rank": 6,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": 3,
+          "entry": null
+        },
+        {
+          "name": "Jan-Lennard Struff",
+          "country": "GER",
+          "rank": 59,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.atptour.com/en/news/beijing-2026-schdule"
+      ],
+      "source_note": "Čas not before 17:00 místního, z indexovaného článku ATP."
+    },
+    {
+      "id": "bj-zverev-shang",
+      "tour": "atp",
+      "level": "ATP 500",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "osmifinále",
+      "court": "Capital Group Diamond",
+      "time_local": "19:00",
+      "time_zone": "CST (UTC+8)",
+      "time_prague": "13:00",
+      "time_kind": "not_before",
+      "players": [
+        {
+          "name": "Alexander Zverev",
+          "country": "GER",
+          "rank": 2,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": 1,
+          "entry": null
+        },
+        {
+          "name": "Juncheng Shang",
+          "country": "CHN",
+          "rank": 250,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": "WC"
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.atptour.com/en/news/beijing-2026-schdule"
+      ],
+      "source_note": "Shang je wild card."
+    },
+    {
+      "id": "bj-cerundolo-mensik",
+      "tour": "atp",
+      "level": "ATP 500",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "osmifinále",
+      "court": "HSBC Moon",
+      "time_local": "17:00",
+      "time_zone": "CST (UTC+8)",
+      "time_prague": "11:00",
+      "time_kind": "not_before",
+      "players": [
+        {
+          "name": "Francisco Cerundolo",
+          "country": "ARG",
+          "rank": 22,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": null
+        },
+        {
+          "name": "Jakub Mensik",
+          "country": "CZE",
+          "rank": 14,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": 8,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.atptour.com/en/news/beijing-2026-schdule"
+      ],
+      "source_note": "Čas not before 17:00 místního."
+    },
+    {
+      "id": "tk-shapo-tabilo",
+      "tour": "atp",
+      "level": "ATP 500",
+      "tournament": "Japan Open",
+      "city": "Tokio",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "osmifinále",
+      "court": "Colosseum",
+      "time_local": "11:00",
+      "time_zone": "JST (UTC+9)",
+      "time_prague": "04:00",
+      "time_kind": "start",
+      "players": [
+        {
+          "name": "Denis Shapovalov",
+          "country": "CAN",
+          "rank": 46,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": null
+        },
+        {
+          "name": "Alejandro Tabilo",
+          "country": "CHI",
+          "rank": 31,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://tennistourcalendar.com/2026-atp-japan-open-daily-schedule-order-of-play-and-results/"
+      ],
+      "source_note": "Order of play stažený 3. 10. 2026. Časy v článku jsou JST a přepočet CEST sedí s UTC+9."
+    },
+    {
+      "id": "tk-alcaraz-arnaldi",
+      "tour": "atp",
+      "level": "ATP 500",
+      "tournament": "Japan Open",
+      "city": "Tokio",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "osmifinále",
+      "court": "Colosseum",
+      "time_local": "12:30",
+      "time_zone": "JST (UTC+9)",
+      "time_prague": "05:30",
+      "time_kind": "not_before",
+      "players": [
+        {
+          "name": "Carlos Alcaraz",
+          "country": "ESP",
+          "rank": 3,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": 1,
+          "entry": null
+        },
+        {
+          "name": "Matteo Arnaldi",
+          "country": "ITA",
+          "rank": 37,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://tennistourcalendar.com/2026-atp-japan-open-daily-schedule-order-of-play-and-results/"
+      ],
+      "source_note": "Not before 12:30 JST."
+    },
+    {
+      "id": "tk-berrettini-vallejo",
+      "tour": "atp",
+      "level": "ATP 500",
+      "tournament": "Japan Open",
+      "city": "Tokio",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "osmifinále",
+      "court": "Colosseum",
+      "time_local": "16:00",
+      "time_zone": "JST (UTC+9)",
+      "time_prague": "09:00",
+      "time_kind": "not_before",
+      "players": [
+        {
+          "name": "Matteo Berrettini",
+          "country": "ITA",
+          "rank": 47,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": null
+        },
+        {
+          "name": "Adolfo Daniel Vallejo",
+          "country": "PAR",
+          "rank": 56,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": "Q"
+        }
+      ],
+      "sources": [
+        "https://tennistourcalendar.com/2026-atp-japan-open-daily-schedule-order-of-play-and-results/"
+      ],
+      "source_note": "Vallejo je kvalifikant."
+    },
+    {
+      "id": "tk-humbert-lehecka",
+      "tour": "atp",
+      "level": "ATP 500",
+      "tournament": "Japan Open",
+      "city": "Tokio",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "osmifinále",
+      "court": "Colosseum",
+      "time_local": null,
+      "time_zone": "JST (UTC+9)",
+      "time_prague": null,
+      "time_kind": "followed_by",
+      "players": [
+        {
+          "name": "Ugo Humbert",
+          "country": "FRA",
+          "rank": 32,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": null
+        },
+        {
+          "name": "Jiri Lehecka",
+          "country": "CZE",
+          "rank": 23,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://tennistourcalendar.com/2026-atp-japan-open-daily-schedule-order-of-play-and-results/"
+      ],
+      "source_note": "Followed by po zápase od 16:00 JST. Přesný start není publikován."
+    },
+    {
+      "id": "bjw-gauff-osorio",
+      "tour": "wta",
+      "level": "WTA 1000",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "2. kolo",
+      "court": "Lotus",
+      "time_local": "11:00",
+      "time_zone": "CST (UTC+8)",
+      "time_prague": "05:00",
+      "time_kind": "start",
+      "players": [
+        {
+          "name": "Coco Gauff",
+          "country": "USA",
+          "rank": 4,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": 3,
+          "entry": null
+        },
+        {
+          "name": "Camila Osorio",
+          "country": "COL",
+          "rank": 66,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": null,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.wtatennis.com/news/4580264/china-open-beijing-2026-dates-draws-prize-money-and-everything-you-need-to-know"
+      ],
+      "source_note": "2. kolo podle rozpisu WTA (30. 9.–3. 10. je druhé kolo 96členného pavouka, tedy kolo 64). Sestava z order of play PDF. Časy z indexovaného společného rozpisu, pokud jsou uvedené."
+    },
+    {
+      "id": "bjw-vekic-zhu",
+      "tour": "wta",
+      "level": "WTA 1000",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "2. kolo",
+      "court": "HSBC Moon",
+      "time_local": "11:00",
+      "time_zone": "CST (UTC+8)",
+      "time_prague": "05:00",
+      "time_kind": "start",
+      "players": [
+        {
+          "name": "Donna Vekic",
+          "country": "CRO",
+          "rank": 40,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": 30,
+          "entry": null
+        },
+        {
+          "name": "Lin Zhu",
+          "country": "CHN",
+          "rank": 199,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": null,
+          "entry": "WC"
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.wtatennis.com/news/4580264/china-open-beijing-2026-dates-draws-prize-money-and-everything-you-need-to-know"
+      ],
+      "source_note": "2. kolo podle rozpisu WTA (30. 9.–3. 10. je druhé kolo 96členného pavouka, tedy kolo 64). Sestava z order of play PDF. Časy z indexovaného společného rozpisu, pokud jsou uvedené."
+    },
+    {
+      "id": "bjw-volynets-mertens",
+      "tour": "wta",
+      "level": "WTA 1000",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "2. kolo",
+      "court": "Brad Drewett",
+      "time_local": "11:00",
+      "time_zone": "CST (UTC+8)",
+      "time_prague": "05:00",
+      "time_kind": "start",
+      "players": [
+        {
+          "name": "Katie Volynets",
+          "country": "USA",
+          "rank": 74,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": null,
+          "entry": null
+        },
+        {
+          "name": "Elise Mertens",
+          "country": "BEL",
+          "rank": 19,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": 13,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.wtatennis.com/news/4580264/china-open-beijing-2026-dates-draws-prize-money-and-everything-you-need-to-know"
+      ],
+      "source_note": "2. kolo podle rozpisu WTA (30. 9.–3. 10. je druhé kolo 96členného pavouka, tedy kolo 64). Sestava z order of play PDF. Časy z indexovaného společného rozpisu, pokud jsou uvedené."
+    },
+    {
+      "id": "bjw-krueger-li",
+      "tour": "wta",
+      "level": "WTA 1000",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "2. kolo",
+      "court": "Court 5",
+      "time_local": "11:00",
+      "time_zone": "CST (UTC+8)",
+      "time_prague": "05:00",
+      "time_kind": "start",
+      "players": [
+        {
+          "name": "Ashlyn Krueger",
+          "country": "USA",
+          "rank": 73,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": null,
+          "entry": null
+        },
+        {
+          "name": "Ann Li",
+          "country": "USA",
+          "rank": 30,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": 21,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.wtatennis.com/news/4580264/china-open-beijing-2026-dates-draws-prize-money-and-everything-you-need-to-know"
+      ],
+      "source_note": "2. kolo podle rozpisu WTA (30. 9.–3. 10. je druhé kolo 96členného pavouka, tedy kolo 64). Sestava z order of play PDF. Časy z indexovaného společného rozpisu, pokud jsou uvedené."
+    },
+    {
+      "id": "bjw-ostapenko-badosa",
+      "tour": "wta",
+      "level": "WTA 1000",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "2. kolo",
+      "court": "HSBC Moon",
+      "time_local": null,
+      "time_zone": "CST (UTC+8)",
+      "time_prague": null,
+      "time_kind": "followed_by",
+      "players": [
+        {
+          "name": "Jelena Ostapenko",
+          "country": "LAT",
+          "rank": 32,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": 24,
+          "entry": null
+        },
+        {
+          "name": "Paula Badosa",
+          "country": "ESP",
+          "rank": 59,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": null,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.wtatennis.com/news/4580264/china-open-beijing-2026-dates-draws-prize-money-and-everything-you-need-to-know"
+      ],
+      "source_note": "Po úvodu kurtu od 11:00. Přesný start v PDF layoutu nebyl strojově oddělen."
+    },
+    {
+      "id": "bjw-siniakova-svitolina",
+      "tour": "wta",
+      "level": "WTA 1000",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "2. kolo",
+      "court": "Brad Drewett",
+      "time_local": null,
+      "time_zone": "CST (UTC+8)",
+      "time_prague": null,
+      "time_kind": "followed_by",
+      "players": [
+        {
+          "name": "Katerina Siniakova",
+          "country": "CZE",
+          "rank": 55,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": null,
+          "entry": null
+        },
+        {
+          "name": "Elina Svitolina",
+          "country": "UKR",
+          "rank": 7,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": 6,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.wtatennis.com/news/4580264/china-open-beijing-2026-dates-draws-prize-money-and-everything-you-need-to-know"
+      ],
+      "source_note": "2. kolo podle rozpisu WTA (30. 9.–3. 10. je druhé kolo 96členného pavouka, tedy kolo 64). Sestava z order of play PDF. Časy z indexovaného společného rozpisu, pokud jsou uvedené."
+    },
+    {
+      "id": "bjw-sakkari-hunter",
+      "tour": "wta",
+      "level": "WTA 1000",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "2. kolo",
+      "court": "Court 5",
+      "time_local": null,
+      "time_zone": "CST (UTC+8)",
+      "time_prague": null,
+      "time_kind": "followed_by",
+      "players": [
+        {
+          "name": "Maria Sakkari",
+          "country": "GRE",
+          "rank": 33,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": 25,
+          "entry": null
+        },
+        {
+          "name": "Storm Hunter",
+          "country": "AUS",
+          "rank": 182,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": null,
+          "entry": "Q"
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.wtatennis.com/news/4580264/china-open-beijing-2026-dates-draws-prize-money-and-everything-you-need-to-know"
+      ],
+      "source_note": "2. kolo podle rozpisu WTA (30. 9.–3. 10. je druhé kolo 96členného pavouka, tedy kolo 64). Sestava z order of play PDF. Časy z indexovaného společného rozpisu, pokud jsou uvedené."
+    },
+    {
+      "id": "bjw-rakhimova-fernandez",
+      "tour": "wta",
+      "level": "WTA 1000",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "2. kolo",
+      "court": "HSBC Moon",
+      "time_local": null,
+      "time_zone": "CST (UTC+8)",
+      "time_prague": null,
+      "time_kind": "followed_by",
+      "players": [
+        {
+          "name": "Kamilla Rakhimova",
+          "country": "UZB",
+          "rank": 76,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": null,
+          "entry": null
+        },
+        {
+          "name": "Leylah Fernandez",
+          "country": "CAN",
+          "rank": 26,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": 23,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.wtatennis.com/news/4580264/china-open-beijing-2026-dates-draws-prize-money-and-everything-you-need-to-know"
+      ],
+      "source_note": "2. kolo podle rozpisu WTA (30. 9.–3. 10. je druhé kolo 96členného pavouka, tedy kolo 64). Sestava z order of play PDF. Časy z indexovaného společného rozpisu, pokud jsou uvedené."
+    },
+    {
+      "id": "bjw-gao-swiatek",
+      "tour": "wta",
+      "level": "WTA 1000",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "2. kolo",
+      "court": "Capital Group Diamond",
+      "time_local": "13:00",
+      "time_zone": "CST (UTC+8)",
+      "time_prague": "07:00",
+      "time_kind": "not_before",
+      "players": [
+        {
+          "name": "Xinyu Gao",
+          "country": "CHN",
+          "rank": 244,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": null,
+          "entry": "WC"
+        },
+        {
+          "name": "Iga Swiatek",
+          "country": "POL",
+          "rank": 9,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": 8,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.wtatennis.com/news/4580264/china-open-beijing-2026-dates-draws-prize-money-and-everything-you-need-to-know"
+      ],
+      "source_note": "2. kolo podle rozpisu WTA (30. 9.–3. 10. je druhé kolo 96členného pavouka, tedy kolo 64). Sestava z order of play PDF. Časy z indexovaného společného rozpisu, pokud jsou uvedené."
+    },
+    {
+      "id": "bjw-zheng-kalinskaya",
+      "tour": "wta",
+      "level": "WTA 1000",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "2. kolo",
+      "court": "Capital Group Diamond",
+      "time_local": null,
+      "time_zone": "CST (UTC+8)",
+      "time_prague": null,
+      "time_kind": "followed_by",
+      "players": [
+        {
+          "name": "Qinwen Zheng",
+          "country": "CHN",
+          "rank": 54,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": null,
+          "entry": "WC"
+        },
+        {
+          "name": "Anna Kalinskaya",
+          "country": "",
+          "rank": 22,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": 15,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.wtatennis.com/news/4580264/china-open-beijing-2026-dates-draws-prize-money-and-everything-you-need-to-know"
+      ],
+      "source_note": "Not before 13:00 spolu s Gao–Swiatek, pořadí na kurtu podle indexovaného rozpisu. Přesná minuta druhého zápasu není samostatně publikovaná."
+    },
+    {
+      "id": "bjw-bencic-zakharova",
+      "tour": "wta",
+      "level": "WTA 1000",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "2. kolo",
+      "court": "Lotus",
+      "time_local": "13:00",
+      "time_zone": "CST (UTC+8)",
+      "time_prague": "07:00",
+      "time_kind": "not_before",
+      "players": [
+        {
+          "name": "Belinda Bencic",
+          "country": "SUI",
+          "rank": 12,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": 9,
+          "entry": null
+        },
+        {
+          "name": "Anastasia Zakharova",
+          "country": "",
+          "rank": 110,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": null,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.wtatennis.com/news/4580264/china-open-beijing-2026-dates-draws-prize-money-and-everything-you-need-to-know"
+      ],
+      "source_note": "2. kolo podle rozpisu WTA (30. 9.–3. 10. je druhé kolo 96členného pavouka, tedy kolo 64). Sestava z order of play PDF. Časy z indexovaného společného rozpisu, pokud jsou uvedené."
+    },
+    {
+      "id": "bjw-jovic-dart",
+      "tour": "wta",
+      "level": "WTA 1000",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "2. kolo",
+      "court": "Brad Drewett",
+      "time_local": null,
+      "time_zone": "CST (UTC+8)",
+      "time_prague": null,
+      "time_kind": "followed_by",
+      "players": [
+        {
+          "name": "Iva Jovic",
+          "country": "USA",
+          "rank": 13,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": 10,
+          "entry": null
+        },
+        {
+          "name": "Harriet Dart",
+          "country": "GBR",
+          "rank": 116,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": null,
+          "entry": "Q"
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.wtatennis.com/news/4580264/china-open-beijing-2026-dates-draws-prize-money-and-everything-you-need-to-know"
+      ],
+      "source_note": "2. kolo podle rozpisu WTA (30. 9.–3. 10. je druhé kolo 96členného pavouka, tedy kolo 64). Sestava z order of play PDF. Časy z indexovaného společného rozpisu, pokud jsou uvedené."
+    },
+    {
+      "id": "bjw-bouzkova-birrell",
+      "tour": "wta",
+      "level": "WTA 1000",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "2. kolo",
+      "court": "Brad Drewett",
+      "time_local": null,
+      "time_zone": "CST (UTC+8)",
+      "time_prague": null,
+      "time_kind": "followed_by",
+      "players": [
+        {
+          "name": "Marie Bouzkova",
+          "country": "CZE",
+          "rank": 27,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": 18,
+          "entry": null
+        },
+        {
+          "name": "Kimberly Birrell",
+          "country": "AUS",
+          "rank": 41,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": null,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.wtatennis.com/news/4580264/china-open-beijing-2026-dates-draws-prize-money-and-everything-you-need-to-know"
+      ],
+      "source_note": "2. kolo podle rozpisu WTA (30. 9.–3. 10. je druhé kolo 96členného pavouka, tedy kolo 64). Sestava z order of play PDF. Časy z indexovaného společného rozpisu, pokud jsou uvedené."
+    },
+    {
+      "id": "bjw-sun-bucsa",
+      "tour": "wta",
+      "level": "WTA 1000",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "2. kolo",
+      "court": "HSBC Moon",
+      "time_local": null,
+      "time_zone": "CST (UTC+8)",
+      "time_prague": null,
+      "time_kind": "followed_by",
+      "players": [
+        {
+          "name": "Xinran Sun",
+          "country": "CHN",
+          "rank": 582,
+          "rank_source": "https://www.wtatennis.com/players/335958/xinran-sun",
+          "seed": null,
+          "entry": "WC"
+        },
+        {
+          "name": "Cristina Bucsa",
+          "country": "ESP",
+          "rank": 35,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": 27,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.wtatennis.com/news/4580264/china-open-beijing-2026-dates-draws-prize-money-and-everything-you-need-to-know"
+      ],
+      "source_note": "Žebříček Sun 582 je z oficiální karty hráčky WTA stažené 3. 10. 2026, ne z tabulky k 2. 10. (byla mimo top 499)."
+    },
+    {
+      "id": "bjw-kartal-wang",
+      "tour": "wta",
+      "level": "WTA 1000",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "2. kolo",
+      "court": "Lotus",
+      "time_local": "19:00",
+      "time_zone": "CST (UTC+8)",
+      "time_prague": "13:00",
+      "time_kind": "not_before",
+      "players": [
+        {
+          "name": "Sonay Kartal",
+          "country": "GBR",
+          "rank": 129,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": null,
+          "entry": null
+        },
+        {
+          "name": "Xinyu Wang",
+          "country": "CHN",
+          "rank": 38,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": 31,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.wtatennis.com/news/4580264/china-open-beijing-2026-dates-draws-prize-money-and-everything-you-need-to-know"
+      ],
+      "source_note": "2. kolo podle rozpisu WTA (30. 9.–3. 10. je druhé kolo 96členného pavouka, tedy kolo 64). Sestava z order of play PDF. Časy z indexovaného společného rozpisu, pokud jsou uvedené."
+    },
+    {
+      "id": "bjw-rybakina-charaeva",
+      "tour": "wta",
+      "level": "WTA 1000",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "2. kolo",
+      "court": "Capital Group Diamond",
+      "time_local": "20:30",
+      "time_zone": "CST (UTC+8)",
+      "time_prague": "14:30",
+      "time_kind": "not_before",
+      "players": [
+        {
+          "name": "Elena Rybakina",
+          "country": "KAZ",
+          "rank": 1,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": 1,
+          "entry": null
+        },
+        {
+          "name": "Alina Charaeva",
+          "country": "ARM",
+          "rank": 118,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": null,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.wtatennis.com/news/4580264/china-open-beijing-2026-dates-draws-prize-money-and-everything-you-need-to-know"
+      ],
+      "source_note": "2. kolo podle rozpisu WTA (30. 9.–3. 10. je druhé kolo 96členného pavouka, tedy kolo 64). Sestava z order of play PDF. Časy z indexovaného společného rozpisu, pokud jsou uvedené."
+    },
+    {
+      "id": "po-rocha-kym",
+      "tour": "atp_challenger",
+      "level": "Challenger 125",
+      "tournament": "Porto Challenger",
+      "city": "Porto",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "semifinále",
+      "court": "Court 1",
+      "time_local": "13:30",
+      "time_zone": "nejisté",
+      "time_prague": null,
+      "time_kind": "published_unconfirmed_tz",
+      "players": [
+        {
+          "name": "Henrique Rocha",
+          "country": "POR",
+          "rank": 127,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": null
+        },
+        {
+          "name": "Jerome Kym",
+          "country": "SUI",
+          "rank": 286,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": null
+        }
+      ],
+      "odds": {
+        "player1": 1.66,
+        "player2": 2.06,
+        "source": "https://tennistonic.com/tennis-news/1060553/h2h-prediction-of-henrique-rocha-vs-jerome-kym-in-porto-challenger-with-odds-preview-pick-3rd-october-2026/",
+        "published": "2026-10-02",
+        "fetched_at": "2026-10-03T01:52:00+02:00",
+        "kind": "snapshot",
+        "bookmaker": null,
+        "note": "Tennis Tonic uvádí initial odds bez jména sázkové kanceláře. Není to živý feed."
+      },
+      "sources": [
+        "https://tennistonic.com/tennis-news/1060553/h2h-prediction-of-henrique-rocha-vs-jerome-kym-in-porto-challenger-with-odds-preview-pick-3rd-october-2026/",
+        "https://tennistonic.com/tournament/atp/22037/Porto%20Challenger/",
+        "https://sapo.pt/artigo/henrique-rocha-garante-estreia-nas-meias-finais-do-porto-open-6abfe4c29406c429beea1f34",
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf"
+      ],
+      "source_note": "Sestava semifinále potvrzena článkem, pavoukem i SAPO. Čas 13:30 je v textu Tennis Tonic; widget turnaje byl při stažení v America/Los_Angeles, proto není přepočet do Prahy."
+    },
+    {
+      "id": "po-jorda-montes",
+      "tour": "atp_challenger",
+      "level": "Challenger 125",
+      "tournament": "Porto Challenger",
+      "city": "Porto",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "semifinále",
+      "court": null,
+      "time_local": null,
+      "time_zone": null,
+      "time_prague": null,
+      "time_kind": "unknown",
+      "players": [
+        {
+          "name": "David Jorda Sanchis",
+          "country": "ESP",
+          "rank": 212,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": null
+        },
+        {
+          "name": "Inaki Montes de la Torre",
+          "country": "ESP",
+          "rank": 228,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://tennistonic.com/tournament/atp/22037/Porto%20Challenger/",
+        "https://sapo.pt/artigo/henrique-rocha-garante-estreia-nas-meias-finais-do-porto-open-6abfe4c29406c429beea1f34"
+      ],
+      "source_note": "Druhé semifinále je v pavouku i v SAPO. Start 3. 10. není v nalezeném order of play s hodinou."
+    },
+    {
+      "id": "js-harris-bolt",
+      "tour": "atp_challenger",
+      "level": "Challenger 100",
+      "tournament": "Jingshan Tennis Open",
+      "city": "Jingshan",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "semifinále",
+      "court": "Center",
+      "time_local": "11:00",
+      "time_zone": "CST (UTC+8)",
+      "time_prague": "05:00",
+      "time_kind": "start",
+      "players": [
+        {
+          "name": "Lloyd Harris",
+          "country": "RSA",
+          "rank": 125,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": 6,
+          "entry": null
+        },
+        {
+          "name": "Alex Bolt",
+          "country": "AUS",
+          "rank": 183,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": 7,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1143/OP.pdf"
+      ],
+      "source_note": "WTA order of play PDF, released 2. 10. 2026 17:47. ATP část je Challenger 100 podle kalendáře ATP."
+    },
+    {
+      "id": "js-jones-shubladze",
+      "tour": "wta_125",
+      "level": "WTA 125",
+      "tournament": "Jingshan Tennis Open",
+      "city": "Jingshan",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "semifinále",
+      "court": "Center",
+      "time_local": null,
+      "time_zone": "CST (UTC+8)",
+      "time_prague": null,
+      "time_kind": "followed_by",
+      "players": [
+        {
+          "name": "Emerson Jones",
+          "country": "AUS",
+          "rank": 134,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": 3,
+          "entry": null
+        },
+        {
+          "name": "Alexandra Shubladze",
+          "country": "",
+          "rank": 163,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": 6,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1143/OP.pdf"
+      ],
+      "source_note": "Followed by po Harris–Bolt od 11:00."
+    },
+    {
+      "id": "js-bouzas-falei",
+      "tour": "wta_125",
+      "level": "WTA 125",
+      "tournament": "Jingshan Tennis Open",
+      "city": "Jingshan",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "round": "semifinále",
+      "court": "Court 2 nebo 3",
+      "time_local": "13:30",
+      "time_zone": "CST (UTC+8)",
+      "time_prague": "07:30",
+      "time_kind": "start",
+      "players": [
+        {
+          "name": "Jessica Bouzas Maneiro",
+          "country": "ESP",
+          "rank": 96,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": 1,
+          "entry": null
+        },
+        {
+          "name": "Aliona Falei",
+          "country": "",
+          "rank": 220,
+          "rank_source": "https://statsdream.com/wta-rankings/",
+          "seed": null,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1143/OP.pdf"
+      ],
+      "source_note": "PDF: starting at 1:30 PM. Přesný kurt je v tabulce sloučený (Court 2 / Court 3)."
+    },
+    {
+      "id": "co-andrade-dietrich",
+      "tour": "atp_challenger",
+      "level": "Challenger 75",
+      "tournament": "Columbus Challenger",
+      "city": "Columbus",
+      "surface": "hard_indoor",
+      "surface_label": "tvrdý, hala",
+      "round": "semifinále",
+      "round_inferred": true,
+      "court": "Court 1",
+      "time_local": null,
+      "time_zone": "EDT (UTC-4)",
+      "time_prague": null,
+      "time_kind": "followed_by",
+      "players": [
+        {
+          "name": "Andres Andrade",
+          "country": "ECU",
+          "rank": 206,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": 5,
+          "entry": null
+        },
+        {
+          "name": "Dylan Dietrich",
+          "country": "SUI",
+          "rank": 363,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://www.protennislive.com/posting/2026/8281/op.pdf",
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf"
+      ],
+      "source_note": "PDF uvádí Hard, kalendář ATP indoor hard. Kolo není v PDF vytištěno jako SF; sobotní dvouhra po finále čtyřhry od 11:00 místního. Start dvouhry je followed by."
+    },
+    {
+      "id": "co-shelbayh-krueger",
+      "tour": "atp_challenger",
+      "level": "Challenger 75",
+      "tournament": "Columbus Challenger",
+      "city": "Columbus",
+      "surface": "hard_indoor",
+      "surface_label": "tvrdý, hala",
+      "round": "semifinále",
+      "round_inferred": true,
+      "court": "Court 1",
+      "time_local": null,
+      "time_zone": "EDT (UTC-4)",
+      "time_prague": null,
+      "time_kind": "followed_by",
+      "players": [
+        {
+          "name": "Abdullah Shelbayh",
+          "country": "JOR",
+          "rank": 346,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": 7,
+          "entry": null
+        },
+        {
+          "name": "Mitchell Krueger",
+          "country": "USA",
+          "rank": 381,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://www.protennislive.com/posting/2026/8281/op.pdf"
+      ],
+      "source_note": "Třetí zápas dne, followed by."
+    },
+    {
+      "id": "cu-barrios-justo",
+      "tour": "atp_challenger",
+      "level": "Challenger 75",
+      "tournament": "Curitiba Challenger",
+      "city": "Curitiba",
+      "surface": "clay",
+      "surface_label": "antuka",
+      "round": "semifinále",
+      "round_inferred": true,
+      "court": "Quadra Central",
+      "time_local": "12:00",
+      "time_zone": "BRT (UTC-3)",
+      "time_prague": "17:00",
+      "time_kind": "start",
+      "players": [
+        {
+          "name": "Tomas Barrios Vera",
+          "country": "CHI",
+          "rank": 135,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": 2,
+          "entry": null
+        },
+        {
+          "name": "Guido Ivan Justo",
+          "country": "ARG",
+          "rank": 239,
+          "rank_source": "https://tennistonic.com/tennis-news/1060737/h2h-prediction-of-tomas-barrios-vera-vs-guido-ivan-justo-in-curitiba-challenger-with-odds-preview-pick-3rd-october-2026/",
+          "seed": 8,
+          "entry": null
+        }
+      ],
+      "odds": {
+        "player1": 1.43,
+        "player2": 2.58,
+        "source": "https://tennistonic.com/tennis-news/1060737/h2h-prediction-of-tomas-barrios-vera-vs-guido-ivan-justo-in-curitiba-challenger-with-odds-preview-pick-3rd-october-2026/",
+        "published": "2026-10-02",
+        "fetched_at": "2026-10-03T01:52:00+02:00",
+        "kind": "snapshot",
+        "bookmaker": null,
+        "note": "Tennis Tonic initial odds, sázková kancelář neuvedena. Oficiální sestava je z protennislive PDF."
+      },
+      "sources": [
+        "https://www.protennislive.com/posting/2026/2895/op.pdf",
+        "https://tennistonic.com/tennis-news/1060737/h2h-prediction-of-tomas-barrios-vera-vs-guido-ivan-justo-in-curitiba-challenger-with-odds-preview-pick-3rd-october-2026/"
+      ],
+      "source_note": "Žebříček Justo 239 je z článku Tennis Tonic k 2. 10. 2026. Ve výpisu StatsDream top 500 tato položka chyběla, proto je zdroj jiný."
+    },
+    {
+      "id": "cu-boscardin-heide",
+      "tour": "atp_challenger",
+      "level": "Challenger 75",
+      "tournament": "Curitiba Challenger",
+      "city": "Curitiba",
+      "surface": "clay",
+      "surface_label": "antuka",
+      "round": "semifinále",
+      "round_inferred": true,
+      "court": "Quadra Central",
+      "time_local": null,
+      "time_zone": "BRT (UTC-3)",
+      "time_prague": null,
+      "time_kind": "followed_by",
+      "players": [
+        {
+          "name": "Pedro Boscardin Dias",
+          "country": "BRA",
+          "rank": 262,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": null
+        },
+        {
+          "name": "Gustavo Heide",
+          "country": "BRA",
+          "rank": 122,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": 1,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://www.protennislive.com/posting/2026/2895/op.pdf"
+      ],
+      "source_note": "Followed by po 12:00. Kurzy k tomuto zápasu se nepodařilo stáhnout."
+    },
+    {
+      "id": "ve-gueymard-schwaerzler",
+      "tour": "atp_challenger",
+      "level": "Challenger 75",
+      "tournament": "Open de Vendée",
+      "city": "Mouilleron-le-Captif",
+      "surface": "hard_indoor",
+      "surface_label": "tvrdý, hala",
+      "round": "semifinále",
+      "round_inferred": true,
+      "court": "Court Central",
+      "time_local": "14:30",
+      "time_zone": "CEST (UTC+2)",
+      "time_prague": "14:30",
+      "time_kind": "not_before",
+      "players": [
+        {
+          "name": "Sascha Gueymard Wayenburg",
+          "country": "FRA",
+          "rank": 218,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": "WC"
+        },
+        {
+          "name": "Joel Schwaerzler",
+          "country": "AUT",
+          "rank": 185,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://www.protennislive.com/posting/2026/6857/op.pdf",
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf"
+      ],
+      "source_note": "PDF píše Hard, kalendář ATP indoor hard. Not before 14:30 po finále čtyřhry od 12:00."
+    },
+    {
+      "id": "ve-chidekh-bernet",
+      "tour": "atp_challenger",
+      "level": "Challenger 75",
+      "tournament": "Open de Vendée",
+      "city": "Mouilleron-le-Captif",
+      "surface": "hard_indoor",
+      "surface_label": "tvrdý, hala",
+      "round": "semifinále",
+      "round_inferred": true,
+      "court": "Court Central",
+      "time_local": null,
+      "time_zone": "CEST (UTC+2)",
+      "time_prague": null,
+      "time_kind": "followed_by",
+      "players": [
+        {
+          "name": "Clement Chidekh",
+          "country": "FRA",
+          "rank": 177,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": 7,
+          "entry": null
+        },
+        {
+          "name": "Henry Bernet",
+          "country": "SUI",
+          "rank": 483,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": "JR"
+        }
+      ],
+      "sources": [
+        "https://www.protennislive.com/posting/2026/6857/op.pdf"
+      ],
+      "source_note": "JR = junior reserved / zvláštní nasazení v PDF jako [JR]. Přesný význam zkratky v PDF není rozveden."
+    },
+    {
+      "id": "ba-sachko-pieri",
+      "tour": "atp_challenger",
+      "level": "Challenger 50",
+      "tournament": "Levante Open",
+      "city": "Bari",
+      "surface": "clay",
+      "surface_label": "antuka",
+      "round": "semifinále",
+      "round_inferred": true,
+      "court": "Center Court",
+      "time_local": "12:30",
+      "time_zone": "CEST (UTC+2)",
+      "time_prague": "12:30",
+      "time_kind": "not_before",
+      "players": [
+        {
+          "name": "Vitaliy Sachko",
+          "country": "UKR",
+          "rank": 179,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": 3,
+          "entry": null
+        },
+        {
+          "name": "Samuele Pieri",
+          "country": "ITA",
+          "rank": 398,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": null
+        }
+      ],
+      "sources": [
+        "https://www.protennislive.com/posting/2026/3151/op.pdf"
+      ],
+      "source_note": "Not before 12:30 po finále čtyřhry od 11:00."
+    },
+    {
+      "id": "ba-martin-donald",
+      "tour": "atp_challenger",
+      "level": "Challenger 50",
+      "tournament": "Levante Open",
+      "city": "Bari",
+      "surface": "clay",
+      "surface_label": "antuka",
+      "round": "semifinále",
+      "round_inferred": true,
+      "court": "Center Court",
+      "time_local": "15:00",
+      "time_zone": "CEST (UTC+2)",
+      "time_prague": "15:00",
+      "time_kind": "not_before",
+      "players": [
+        {
+          "name": "Juan Cruz Martin Manzano",
+          "country": "ITA",
+          "rank": 426,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": "Alt"
+        },
+        {
+          "name": "Matthew William Donald",
+          "country": "CZE",
+          "rank": 460,
+          "rank_source": "https://statsdream.com/atp-rankings/",
+          "seed": null,
+          "entry": "Q"
+        }
+      ],
+      "sources": [
+        "https://www.protennislive.com/posting/2026/3151/op.pdf"
+      ],
+      "source_note": "Donald je v žebříčku StatsDream jako Matthew Donald, Česká republika, 460. PDF: Matthew William Donald (CZE), kvalifikant."
+    }
+  ],
+  "doubles": [
+    {
+      "id": "bj-d-arends",
+      "tour": "atp",
+      "level": "ATP 500",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface_label": "tvrdý",
+      "round": "čtvrtfinále čtyřhry",
+      "court": "Court 5",
+      "time_local": "15:00",
+      "time_zone": "CST",
+      "time_prague": "09:00",
+      "time_kind": "not_before",
+      "teams": [
+        "Sander Arends / David Pel",
+        "Zhizhen Zhang / Yi Zhou"
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.atptour.com/en/news/beijing-2026-schdule"
+      ]
+    },
+    {
+      "id": "bj-d-cabral",
+      "tour": "atp",
+      "level": "ATP 500",
+      "tournament": "China Open",
+      "city": "Peking",
+      "surface_label": "tvrdý",
+      "round": "čtvrtfinále čtyřhry",
+      "court": "Court 5",
+      "time_local": null,
+      "time_zone": "CST",
+      "time_prague": null,
+      "time_kind": "followed_by",
+      "teams": [
+        "Francisco Cabral / JJ Tracy",
+        "Robert Cash / Alexander Erler"
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf",
+        "https://www.atptour.com/en/news/beijing-2026-schdule"
+      ]
+    },
+    {
+      "id": "tk-d1",
+      "tour": "atp",
+      "level": "ATP 500",
+      "tournament": "Japan Open",
+      "city": "Tokio",
+      "surface_label": "tvrdý",
+      "round": "čtvrtfinále čtyřhry",
+      "court": "Kinoshita Group Show Court",
+      "time_local": "11:00",
+      "time_zone": "JST",
+      "time_prague": "04:00",
+      "time_kind": "start",
+      "teams": [
+        "Lucas Miedler / Neil Oberleitner",
+        "Théo Arribage / Albano Olivetti"
+      ],
+      "sources": [
+        "https://tennistourcalendar.com/2026-atp-japan-open-daily-schedule-order-of-play-and-results/"
+      ]
+    },
+    {
+      "id": "tk-d2",
+      "tour": "atp",
+      "level": "ATP 500",
+      "tournament": "Japan Open",
+      "city": "Tokio",
+      "surface_label": "tvrdý",
+      "round": "čtvrtfinále čtyřhry",
+      "court": "Kinoshita Group Show Court",
+      "time_local": "12:00",
+      "time_zone": "JST",
+      "time_prague": "05:00",
+      "time_kind": "not_before",
+      "teams": [
+        "Rinky Hijikata / Kaito Uesugi",
+        "Hugo Nys / Edouard Roger-Vasselin"
+      ],
+      "sources": [
+        "https://tennistourcalendar.com/2026-atp-japan-open-daily-schedule-order-of-play-and-results/"
+      ]
+    },
+    {
+      "id": "tk-d3",
+      "tour": "atp",
+      "level": "ATP 500",
+      "tournament": "Japan Open",
+      "city": "Tokio",
+      "surface_label": "tvrdý",
+      "round": "čtvrtfinále čtyřhry",
+      "court": "Kinoshita Group Show Court",
+      "time_local": null,
+      "time_zone": "JST",
+      "time_prague": null,
+      "time_kind": "followed_by",
+      "teams": [
+        "Austin Krajicek / Nikola Mektic",
+        "Alejandro Tabilo / Luca Van Assche"
+      ],
+      "sources": [
+        "https://tennistourcalendar.com/2026-atp-japan-open-daily-schedule-order-of-play-and-results/"
+      ]
+    },
+    {
+      "id": "tk-d4",
+      "tour": "atp",
+      "level": "ATP 500",
+      "tournament": "Japan Open",
+      "city": "Tokio",
+      "surface_label": "tvrdý",
+      "round": "čtvrtfinále čtyřhry",
+      "court": "Kinoshita Group Show Court",
+      "time_local": null,
+      "time_zone": "JST",
+      "time_prague": null,
+      "time_kind": "followed_by",
+      "teams": [
+        "Simone Bolelli / Andrea Vavassori",
+        "Marc Polmans / Jan Zielinski"
+      ],
+      "sources": [
+        "https://tennistourcalendar.com/2026-atp-japan-open-daily-schedule-order-of-play-and-results/"
+      ]
+    },
+    {
+      "id": "js-d",
+      "tour": "wta_125",
+      "level": "WTA 125",
+      "tournament": "Jingshan Tennis Open",
+      "city": "Jingshan",
+      "surface_label": "tvrdý",
+      "round": "finále čtyřhry",
+      "court": "Center",
+      "time_local": null,
+      "time_zone": "CST",
+      "time_prague": null,
+      "time_kind": "followed_by",
+      "teams": [
+        "Sofya Lansere / Alexandra Shubladze",
+        "Madeleine Brooks / Amelia Rajecki"
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1143/OP.pdf"
+      ]
+    },
+    {
+      "id": "cu-d",
+      "tour": "atp_challenger",
+      "level": "Challenger 75",
+      "tournament": "Curitiba Challenger",
+      "city": "Curitiba",
+      "surface_label": "antuka",
+      "round": "finále čtyřhry",
+      "court": "Quadra Central",
+      "time_local": null,
+      "time_zone": "BRT",
+      "time_prague": null,
+      "time_kind": "followed_by",
+      "teams": [
+        "Mariano Kestelboim / Marcelo Zormann",
+        "Guto Miguel / Eduardo Ribeiro"
+      ],
+      "sources": [
+        "https://www.protennislive.com/posting/2026/2895/op.pdf"
+      ]
+    }
+  ],
+  "gaps": [
+    "Jingshan, ATP semifinále: order of play má Mattia Bellucci proti „Erel OR Cina“. Soupeř není uzavřený, zápas proto není na desce.",
+    "Jingshan, finále mužské čtyřhry: Escobar/Kaliyanda Poonacha proti „Reyes-Varela/Stalder OR Lammons/Withrow“. Druhý pár není uzavřený.",
+    "Columbus, Bari a Vendée: finále čtyřhry je na PDF, ale sloupcový text párů je nejednoznačný. Čtyřhra těchto tří turnajů není na desce, ať se nesplete složení.",
+    "Časy pekingských zápasů kromě pořadí kurtů pocházejí z indexovaného článku ATP. Přímé otevření atptour.com vrátilo Cloudflare blokaci, layout PDF nešel v tom samém kroku vytáhnout pdftotextem.",
+    "Porto, čas Rocha–Kym: 13:30 v článku, pásmo nejisté.",
+    "Kolo „semifinále“ u Columbusu, Curitiby, Vendée a Bari je odvozené (sobota, finále čtyřhry a dva singly před nedělním finále). PDF to slovo SF netiskne.",
+    "Žádný zápas nemá povrchový žebříček. Povrchový člen modelu je proto 0.",
+    "Kurzy: PartyPoker Tokyo při přímém stažení ukázal jen outright na vítěze turnaje (americké kurzy), ne moneyline zápasů. Ty outright ceny se na zápasy nepřenášejí. U ostatních zápasů veřejná desetinná linie nebyla stažena."
+  ],
+  "unavailable": [
+    {
+      "circuit": "ATP 250 / 1000 / Finals",
+      "state": "dnes se nehraje",
+      "detail": "Týden od 30. 9. 2026 má na hlavním okruhu jen China Open a Japan Open (oba ATP 500). Rolex Shanghai Masters začíná 7. 10., Bybit Stockholm Open 8. 11., Nitto ATP Finals 15. 11.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf",
+        "https://www.bbc.co.uk/sport/tennis/calendar/2026-10"
+      ]
+    },
+    {
+      "circuit": "WTA hlavní okruh kromě Pekingu",
+      "state": "dnes se nehraje",
+      "detail": "Kalendář BBC na říjen 2026 nemá 3. 10. další WTA událost. Wuhan Open začíná 12. 10.",
+      "sources": [
+        "https://www.bbc.co.uk/sport/tennis/calendar/2026-10"
+      ]
+    },
+    {
+      "circuit": "WTA 125 kromě Jingshan",
+      "state": "rozpis na 3. 10. nenalezen",
+      "detail": "Samsun Open podle oficiální stránky začíná až 5. 10. 2026 a order of play ještě není. Jiný WTA 125 rozpis na 3. 10. se nepodařilo ověřit. Nezobrazují se vymyšlené zápasy.",
+      "sources": [
+        "https://www.wtatennis.com/tournaments/1149/samsun-125/2026/order-of-play",
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1143/OP.pdf"
+      ]
+    },
+    {
+      "circuit": "ATP Challenger mimo týden od 28. 9.",
+      "state": "ověřený seznam týdne",
+      "detail": "Kalendář Challengeru (revize k 18. 8. 2026), týden 39 od 28. 9.: Porto 125, Jingshan 100, Columbus 75, Curitiba 75, Mouilleron-le-Captif 75, Bari 50. Villena, Antofagasta, Braga, Palermo a Wuning 3 začínají až 5. 10. U všech šesti turnajů týdne je sobotní dvouhra na desce.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf"
+      ]
+    }
+  ],
+  "outrights_not_used": {
+    "source": "https://www.partypoker.com/en/sports/events/atp-tokyo-jpn-2026-19972570",
+    "fetched_at": "2026-10-03T01:52:00+02:00",
+    "market": "vítěz Japan Open",
+    "note": "Americké outright kurzy nejsou kurzy zápasu a na desce se nepoužívají."
+  },
+  "upcoming": [
+    {
+      "id": "samsun-2026",
+      "tour": "wta_125",
+      "level": "WTA 125",
+      "name": "Samsun Open",
+      "city": "Samsun",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "start": "2026-10-05",
+      "end": "2026-10-11",
+      "note": "Oficiální stránka: order of play ještě není. Žádný zápas se nedoplňuje.",
+      "sources": [
+        "https://www.wtatennis.com/tournaments/1149/samsun-125/2026/order-of-play"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "shanghai-2026",
+      "tour": "atp",
+      "level": "ATP 1000",
+      "name": "Rolex Shanghai Masters",
+      "city": "Šanghaj",
+      "surface": "hard",
+      "surface_label": "tvrdý, venku",
+      "start": "2026-10-07",
+      "end": "2026-10-18",
+      "note": "Kvalifikace 5.–6. 10. podle náhledu kalendáře. Hlavní soutěž 7.–18. 10. Oficiální pavouk a denní order of play v době sběru nebyly obsazené zápasy. Plánované bloky kol nejsou zápasy.",
+      "sources": [
+        "https://www.atptour.com/en/tournaments/shanghai/5014/overview",
+        "https://tennis-calendar.com/blog/shanghai-masters-2026-preview",
+        "https://www.bbc.co.uk/sport/tennis/calendar/2026-10"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "villena-2026",
+      "tour": "atp_challenger",
+      "level": "Challenger 100",
+      "name": "Villena",
+      "city": "Villena",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "start": "2026-10-05",
+      "end": "2026-10-11",
+      "note": "Týden 40 kalendáře ATP Challenger. Order of play na konkrétní zápasy se nenašel.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "antofagasta-2026",
+      "tour": "atp_challenger",
+      "level": "Challenger 75",
+      "name": "Antofagasta",
+      "city": "Antofagasta",
+      "surface": "clay",
+      "surface_label": "antuka",
+      "start": "2026-10-05",
+      "end": "2026-10-11",
+      "note": "Týden 40. Pavouk neověřen.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "braga-2026",
+      "tour": "atp_challenger",
+      "level": "Challenger 75",
+      "name": "Braga",
+      "city": "Braga",
+      "surface": "clay",
+      "surface_label": "antuka",
+      "start": "2026-10-05",
+      "end": "2026-10-11",
+      "note": "Týden 40. Pavouk neověřen.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "palermo-ch-2026",
+      "tour": "atp_challenger",
+      "level": "Challenger 50",
+      "name": "Palermo",
+      "city": "Palermo",
+      "surface": "clay",
+      "surface_label": "antuka",
+      "start": "2026-10-05",
+      "end": "2026-10-11",
+      "note": "Týden 40, antuka, Challenger 50. Není to WTA Palermo z jiného termínu.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "wuning-2026",
+      "tour": "atp_challenger",
+      "level": "Challenger 50",
+      "name": "Wuning 3",
+      "city": "Wuning",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "start": "2026-10-05",
+      "end": "2026-10-11",
+      "note": "V kalendáři označeno jako přidané. Pavouk neověřen.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "wuhan-2026",
+      "tour": "wta",
+      "level": "WTA 1000",
+      "name": "Wuhan Open",
+      "city": "Wuhan",
+      "surface": "hard",
+      "surface_label": "tvrdý, venku",
+      "start": "2026-10-12",
+      "end": "2026-10-18",
+      "note": "56 hráček dvouhry. Oficiální stránka pavouka: draw currently not available. Losování má být 10. 10. Seznam přihlášených není pavouk, proto tu nejsou dvojice.",
+      "sources": [
+        "https://www.wtatennis.com/tournaments/1075/wuhan/2026",
+        "https://www.wtatennis.com/tournaments/1075/wuhan/2026/draws",
+        "https://www.wtatennis.com/news/4577819/elena-rybakina-aryna-sabalenka-jessica-pegula-coco-gauff-headline-wuhan-field",
+        "https://www.bbc.co.uk/sport/tennis/calendar/2026-10"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "jinan-2026",
+      "tour": "atp_challenger",
+      "level": "Challenger 125",
+      "name": "Jinan",
+      "city": "Jinan",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "start": "2026-10-12",
+      "end": "2026-10-18",
+      "note": "Týden 41.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "olbia-2026",
+      "tour": "atp_challenger",
+      "level": "Challenger 125",
+      "name": "Olbia",
+      "city": "Olbia",
+      "surface": "hard",
+      "surface_label": "tvrdý",
+      "start": "2026-10-12",
+      "end": "2026-10-18",
+      "note": "Týden 41.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "maia-2026",
+      "tour": "atp_challenger",
+      "level": "Challenger 100",
+      "name": "Maia",
+      "city": "Maia",
+      "surface": "clay_indoor",
+      "surface_label": "antuka, hala",
+      "start": "2026-10-12",
+      "end": "2026-10-18",
+      "note": "V kalendáři povrch IC.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "roanne-2026",
+      "tour": "atp_challenger",
+      "level": "Challenger 100",
+      "name": "Roanne",
+      "city": "Roanne",
+      "surface": "hard_indoor",
+      "surface_label": "tvrdý, hala",
+      "start": "2026-10-12",
+      "end": "2026-10-18",
+      "note": "V kalendáři povrch IH.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "santacruz-2026",
+      "tour": "atp_challenger",
+      "level": "Challenger 75",
+      "name": "Santa Cruz de la Sierra 2",
+      "city": "Santa Cruz",
+      "surface": "clay",
+      "surface_label": "antuka",
+      "start": "2026-10-12",
+      "end": "2026-10-18",
+      "note": "Týden 41.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "catania-2026",
+      "tour": "atp_challenger",
+      "level": "Challenger 50",
+      "name": "Catania",
+      "city": "Catania",
+      "surface": "clay",
+      "surface_label": "antuka",
+      "start": "2026-10-12",
+      "end": "2026-10-18",
+      "note": "Týden 41.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "ningbo-2026",
+      "tour": "wta",
+      "level": "WTA 500",
+      "name": "Ningbo Open",
+      "city": "Ningbo",
+      "surface": "hard",
+      "surface_label": "tvrdý, venku",
+      "start": "2026-10-19",
+      "end": "2026-10-25",
+      "note": "Termín z kalendáře BBC, kategorie 500 z tennis-x. Pavouk neověřen.",
+      "sources": [
+        "https://www.bbc.co.uk/sport/tennis/calendar/2026-10",
+        "https://www.tennis-x.com/schedule.php"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "osaka-2026",
+      "tour": "wta",
+      "level": "WTA 250",
+      "name": "Japan Women's Open",
+      "city": "Ósaka",
+      "surface": "hard",
+      "surface_label": "tvrdý, venku",
+      "start": "2026-10-19",
+      "end": "2026-10-25",
+      "note": "Areál Utsubo. Pavouk neověřen.",
+      "sources": [
+        "https://www.bbc.co.uk/sport/tennis/calendar/2026-10",
+        "https://www.tennis-x.com/schedule.php"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "almaty-2026",
+      "tour": "atp",
+      "level": "ATP 250",
+      "name": "Almaty Open",
+      "city": "Almaty",
+      "surface": "hard_indoor",
+      "surface_label": "tvrdý, hala",
+      "start": "2026-10-19",
+      "end": "2026-10-25",
+      "note": "Kalendář ATP, týden od 19. 10.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf",
+        "https://www.tennis-x.com/schedule.php"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "lyon-2026",
+      "tour": "atp",
+      "level": "ATP 250",
+      "name": "Grand Prix Auvergne-Rhône-Alpes",
+      "city": "Lyon",
+      "surface": "hard_indoor",
+      "surface_label": "tvrdý, hala",
+      "start": "2026-10-19",
+      "end": "2026-10-25",
+      "note": "Kalendář ATP a tennis-x. Pavouk neověřen.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf",
+        "https://www.tennis-x.com/schedule.php"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "guangzhou-2026",
+      "tour": "wta",
+      "level": "WTA 250",
+      "name": "Guangzhou Open",
+      "city": "Kanton",
+      "surface": "hard",
+      "surface_label": "tvrdý, venku",
+      "start": "2026-10-26",
+      "end": "2026-11-01",
+      "note": "Pavouk neověřen.",
+      "sources": [
+        "https://www.bbc.co.uk/sport/tennis/calendar/2026-10",
+        "https://www.tennis-x.com/schedule.php"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "panpacific-2026",
+      "tour": "wta",
+      "level": "WTA 500",
+      "name": "Pan Pacific Open",
+      "city": "Tokio",
+      "surface": "hard",
+      "surface_label": "tvrdý, venku",
+      "start": "2026-10-26",
+      "end": "2026-11-01",
+      "note": "Ariake. Pavouk neověřen.",
+      "sources": [
+        "https://www.bbc.co.uk/sport/tennis/calendar/2026-10",
+        "https://www.tennis-x.com/schedule.php"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "basel-2026",
+      "tour": "atp",
+      "level": "ATP 500",
+      "name": "Swiss Indoors Basel",
+      "city": "Basilej",
+      "surface": "hard_indoor",
+      "surface_label": "tvrdý, hala",
+      "start": "2026-10-26",
+      "end": "2026-11-01",
+      "note": "Pavouk neověřen.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf",
+        "https://www.tennis-x.com/schedule.php",
+        "https://www.bbc.co.uk/sport/tennis/calendar/2026-10"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "vienna-2026",
+      "tour": "atp",
+      "level": "ATP 500",
+      "name": "Erste Bank Open",
+      "city": "Vídeň",
+      "surface": "hard_indoor",
+      "surface_label": "tvrdý, hala",
+      "start": "2026-10-26",
+      "end": "2026-11-01",
+      "note": "Pavouk neověřen.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf",
+        "https://www.tennis-x.com/schedule.php"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "paris-2026",
+      "tour": "atp",
+      "level": "ATP 1000",
+      "name": "Rolex Paris Masters",
+      "city": "Paříž",
+      "surface": "hard_indoor",
+      "surface_label": "tvrdý, hala",
+      "start": "2026-11-02",
+      "end": "2026-11-08",
+      "note": "Pavouk neověřen.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf",
+        "https://www.tennis-x.com/schedule.php"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "stockholm-2026",
+      "tour": "atp",
+      "level": "ATP 250",
+      "name": "Bybit Stockholm Open",
+      "city": "Stockholm",
+      "surface": "hard_indoor",
+      "surface_label": "tvrdý, hala",
+      "start": "2026-11-08",
+      "end": "2026-11-14",
+      "note": "Pavouk neověřen.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf",
+        "https://www.tennis-x.com/schedule.php"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    },
+    {
+      "id": "finals-2026",
+      "tour": "atp",
+      "level": "ATP Finals",
+      "name": "Nitto ATP Finals",
+      "city": "Turín",
+      "surface": "hard_indoor",
+      "surface_label": "tvrdý, hala",
+      "start": "2026-11-15",
+      "end": "2026-11-22",
+      "note": "Osm hráčů podle žebříčku sezóny. Sestava k 3. 10. není uzavřená, proto tu nejsou jména.",
+      "sources": [
+        "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2026-27-atp-challenger-calendar-as-of-18-aug-2026.pdf",
+        "https://www.tennis-x.com/schedule.php"
+      ],
+      "matches": [],
+      "draw_status": "pavouk zatím není"
+    }
+  ],
+  "upcoming_notes": [
+    "European Open v Bruselu je v revidovaném kalendáři ATP u týdne od 19. 10. 2026 označen jako zrušený. Není na seznamu jako turnaj, který se hraje.",
+    "Další challengerové týdny po 18. 10. v tom samém PDF jsou (Soul, Brest, Sioux Falls a další). Na desce nadcházejících jsou jen nejbližší dva týdny plus hlavní okruh do Finals, ať se seznam neutopí. U žádného z nich není ověřený pavouk.",
+    "Šanghajský a wuchanský pavouk se při kontrole 3. 10. 2026 nenašel jako hotové dvojice. Plán kol a seznam přihlášených nejsou order of play."
+  ],
+  "odds_attempts": [
+    {
+      "at": "2026-10-03T01:55:00+02:00",
+      "url": "https://www.oddsportal.com/tennis/china/atp-beijing/",
+      "result": "Bez kurzů. Text stránky: Next Matches will appear here as soon as bookmaker betting odds become available."
+    },
+    {
+      "at": "2026-10-03T01:55:00+02:00",
+      "url": "https://www.flashscore.com/tennis/",
+      "result": "Stažená stránka neobsáhla desetinné kurzy jednotlivých zápasů."
+    },
+    {
+      "at": "2026-10-03T01:50:00+02:00",
+      "url": "https://www.partypoker.com/en/sports/events/atp-tokyo-jpn-2026-19972570",
+      "result": "Jen outright na vítěze turnaje v americkém zápisu, ne moneyline zápasů. Na desku zápasů se nepřenáší."
+    }
+  ]
+}
