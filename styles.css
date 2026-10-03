@@ -158,11 +158,15 @@ footer {
   border-top: 1px solid var(--line);
   font-size: 13px;
 }
-@media (max-width: 800px) {
+@media (max-width: 800px), (orientation: portrait) and (max-width: 1000px) {
   .top, main, footer { padding-left: 16px; padding-right: 16px; }
-  .nav { margin-left: 0; }
-  .row { grid-template-columns: 1fr; gap: 6px; }
+  .top { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .nav { margin-left: 0; width: 100%; flex-wrap: wrap; }
+  .row { grid-template-columns: 1fr; gap: 8px; }
+  .p { flex-direction: column; align-items: flex-start; gap: 2px; }
   .lede h1 { font-size: 42px; }
+  .tournament header { flex-direction: column; align-items: flex-start; }
+  .drawer-card { width: 100%; }
 }
 
 .event {
