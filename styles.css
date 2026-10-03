@@ -134,6 +134,7 @@ main { padding: 22px 28px 64px; max-width: 1180px; }
   background: var(--card);
 }
 .empty-kicker { font-family: var(--serif); font-size: 32px; color: var(--ink) !important; margin-top: 0; }
+.drawer[hidden] { display: none !important; }
 .drawer {
   position: fixed; inset: 0; background: rgba(8,8,6,.62);
   display: flex; justify-content: flex-end;
